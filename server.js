@@ -1,11 +1,12 @@
 const express = require("express");
+require('dotenv').config();
 const fileUpload = require("express-fileupload");
 const path = require("path");
 const fs = require("fs");
 const FormData = require("form-data");
 const fetch = require("node-fetch");
 
-const CLOUDMERSIVE_API_KEY = process.env.CLOUDMERSIVE_API_KEY || "6dd45f18-9ade-4e76-b1e4-596dea59df66";
+const CLOUDMERSIVE_API_KEY = process.env.CLOUDMERSIVE_API_KEY;
 
 const app = express();
 app.use(express.static("public"));
